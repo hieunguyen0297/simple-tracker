@@ -1,0 +1,148 @@
+.App {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 50px;
+  animation: shadow 3s linear infinite;
+  background: #aadaff;
+  margin: 20px auto 0;
+  padding: 20px 0;
+  border: #555555 solid 2px;
+  width: 100%;
+  border-bottom: none;
+}
+
+@keyframes shadow {
+  0% {
+    text-shadow: 0 0px 1px rgb(224, 219, 219);
+  }
+
+  50% {
+    text-shadow: 1px 2px 4px;
+  }
+}
+
+.container {
+  width: 1500px;
+  height: 85vh;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border: 2px solid #555555;
+  border-top: none;
+}
+
+.marker img {
+  width: 30px;
+}
+
+.openInforBox {
+  width: 300px;
+  background-color: #414a4c;
+  color: #fff;
+  animation-name: box;
+  animation-duration: 1s;
+  transition: width ease-in-out;
+  text-align: left;
+  padding: 20px 15px;
+}
+
+/* animate for text box on the right  */
+@keyframes box {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 300px;
+  }
+}
+
+.coordinate {
+  display: flex;
+}
+.coordinate div {
+  padding-top: 2px;
+}
+
+.openInforBox img {
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.openInforBox div {
+  margin-bottom: 15px;
+}
+
+.openInforBox p {
+  width: 200px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.linka {
+  color: violet;
+  margin-left: 5px;
+}
+
+.xBtn {
+  text-align: right;
+}
+
+.smoke {
+  position: relative;
+  display: flex;
+  z-index: 1;
+  bottom: -5px;
+}
+
+.smoke span {
+  position: relative;
+  display: block;
+  left: 9px;
+  min-width: 4px;
+  height: 15px;
+  background-color: #939393;
+
+  border-radius: 50%;
+  animation: animate 4s linear infinite;
+}
+
+.smoke span:nth-child(1) {
+  animation-delay: 1s;
+}
+.smoke span:nth-child(2) {
+  animation-delay: 3s;
+}
+.smoke span:nth-child(3) {
+  animation-delay: 4s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) scaleX(0.4);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px) scaleX(0.8);
+  }
+
+  100% {
+    transform: translateY(-15px) scaleX(1.5);
+    opacity: 0;
+  }
+}
